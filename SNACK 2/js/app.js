@@ -40,11 +40,26 @@ const students= [{
 
 //1.Creare una lista con i nomi in maiuscolo
 const studentsUpperCase= [];
+//2.Creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70
+const studentsGoodGrades= [];
+//3.creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
+const studentsGoodGradesHighId= [];
 
 for (i=0; i< students.length; i++){
     const singleStundent = students[i];
+    //trasformo i nomi in maiuscolo
     singleStundent.name = singleStundent.name.toLocaleUpperCase();
+    //pusho gli studenti nell'array apposito
     studentsUpperCase.push(singleStundent.name)
+    
+    if (singleStundent.grades > 70 && singleStundent.id >120){
+        studentsGoodGradesHighId.push(singleStundent)
+
+    } else if (singleStundent.grades > 70){
+        studentsGoodGrades.push(singleStundent)
+    } 
 }
 
 console.log(studentsUpperCase);
+console.log(studentsGoodGrades);
+console.log(studentsGoodGradesHighId);
