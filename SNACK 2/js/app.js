@@ -51,15 +51,23 @@ for (i=0; i< students.length; i++){
     singleStundent.name = singleStundent.name.toLocaleUpperCase();
     //pusho gli studenti nell'array apposito
     studentsUpperCase.push(singleStundent.name)
+
+    if (singleStundent.grades > 70){
+    studentsGoodGrades.push(singleStundent)
+    } 
     
     if (singleStundent.grades > 70 && singleStundent.id >120){
         studentsGoodGradesHighId.push(singleStundent)
-
-    } else if (singleStundent.grades > 70){
-        studentsGoodGrades.push(singleStundent)
-    } 
+    }
 }
+
+// const studentsUpperCase= students.map ((el) => el.name.toLocaleUpperCase())
+// const studentsGoodGrades= students.filter ((el) => el.grades > 70)
+// const studentsGoodGradesHighId= students.filter ((el) => el.grades > 70 && el.id > 120)
 
 console.log(studentsUpperCase);
 console.log(studentsGoodGrades);
 console.log(studentsGoodGradesHighId);
+
+
+
